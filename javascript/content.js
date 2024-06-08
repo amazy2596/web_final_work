@@ -1,31 +1,30 @@
-import { University, picturePositionSelect } from "./variables.js";
-import { aboutMe } from "./variables.js";
-import { iconColors } from "./variables.js";
-import { backgroundColors } from "./variables.js";
-import { texts } from "./variables.js";
-import { titles } from "./variables.js";
-import { arrows } from "./variables.js";
-import { icons } from "./variables.js";
-import { pic } from "./variables.js";
-import { leftbar } from "./variables.js";
-import { controls } from "./variables.js";
-import { root } from "./variables.js";
-import { container0 } from "./variables.js";
-import { container1 } from "./variables.js";
+import {University, picturePositionSelect} from "./variables.js";
+import {aboutMe} from "./variables.js";
+import {iconColors} from "./variables.js";
+import {backgroundColors} from "./variables.js";
+import {texts} from "./variables.js";
+import {titles} from "./variables.js";
+import {arrows} from "./variables.js";
+import {icons} from "./variables.js";
+import {pic} from "./variables.js";
+import {leftbar} from "./variables.js";
+import {controls} from "./variables.js";
+import {root} from "./variables.js";
+import {container0} from "./variables.js";
+import {container1} from "./variables.js";
 
 
-import { setStyle } from "./utils.js";
+import {setStyle} from "./utils.js";
 
 let lastHoverButtonIndex = -1;
 
-aboutMe.addEventListener('mouseover', function(event) {
+aboutMe.addEventListener('mouseover', function (event) {
 
     if (event.target == aboutMe) {
         setStyle(aboutMe, {
             width: "0px",
         });
-    }
-    else {
+    } else {
         setStyle(aboutMe, {
             width: "15px",
         });
@@ -44,7 +43,7 @@ function handleMouseOverOrClick() {
 
     texts.forEach((text) => {
         setStyle(text, {
-            display: "none",
+            opacity: '0',
             color: "rgb(120, 120, 120)",
         });
     });
@@ -72,7 +71,7 @@ function handleMouseOverOrClick() {
 
         setStyle(leftbar, {
             backgroundColor: iconColors[lastHoverButtonIndex],
-            opactiy: "1",
+            opacity: "1",
         });
 
         setStyle(root, {
@@ -155,7 +154,7 @@ controls.forEach((control, index) => {
 
         texts.forEach((text) => {
             setStyle(text, {
-                display: "block",
+                opacity: '1'
             });
         });
 
