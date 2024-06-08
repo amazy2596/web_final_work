@@ -12,6 +12,8 @@ export const container0 = document.getElementById('container0');
 
 export const container1 = document.getElementById('container1');
 
+export const container2 = document.getElementById('container2');
+
 export const University = document.getElementById('University');
 
 export const aboutMe = document.getElementById('aboutMe');
@@ -36,8 +38,6 @@ export const arrows = document.querySelectorAll('.arrow');
 
 export const root = document.getElementById('root');
 
-export const columnBox = document.getElementById('column_box');
-
 export const iconColors = [
     "rgb(178, 34, 34)",     // 火砖红，对应建国
     "rgb(34, 139, 34)",     // 森林绿，对应改革开放
@@ -61,23 +61,12 @@ export const backgroundColors = [
 ];
 
 export const picturePositionSelect = [
-    "translateY(30%)",
-    "translateY(-15%)",
-    "translateY(-60%)",
-    "translateY(-105%)",
-    "translateY(-150%)",
-    "translateY(-195%)",
-    "translateY(-240%)",
-    "translateY(-285%)",
-];
-
-export const picturePosition = [
     "translateY(20%)",
-    "translateY(-35%)",
-    "translateY(-95%)",
-    "translateY(-150%)",
-    "translateY(-205%)",
-    "translateY(-265%)",
-    "translateY(-320%)",
+    "translateY(-36%)",
+    "translateY(-93%)",
+    "translateY(-149%)",
+    "translateY(-206%)",
+    "translateY(-262%)",
+    "translateY(-319%)",
     "translateY(-375%)",
 ];

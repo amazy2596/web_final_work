@@ -1,4 +1,4 @@
-import { University } from "./variables.js";
+import { University, rightbar } from "./variables.js";
 import { aboutMe } from "./variables.js";
 import { iconColors } from "./variables.js";
 import { backgroundColors } from "./variables.js";
@@ -13,9 +13,8 @@ import { root } from "./variables.js";
 import { container0 } from "./variables.js";
 import { container1 } from "./variables.js";
 import { picturePositionSelect } from "./variables.js";
-import { picturePosition } from "./variables.js";
 import { pic_div } from "./variables.js";
-import { columnBox } from "./variables.js";
+import { container2 } from "./variables.js";
 import { setStyle } from "./utils.js";
 
 let lastHoverButtonIndex = -1;
@@ -23,12 +22,12 @@ let lastHoverButtonIndex = -1;
 aboutMe.addEventListener('mouseover', function(event) {
 
     if (event.target == aboutMe) {
-        setStyle(aboutMe, {
+        setStyle(rightbar, {
             width: "0px",
         });
     }
     else {
-        setStyle(aboutMe, {
+        setStyle(rightbar, {
             width: "15px",
         });
     }
@@ -54,6 +53,12 @@ function handleMouseOverOrClick() {
     titles.forEach((title) => {
         setStyle(title, {
             display: "none",
+        });
+    });
+
+    pic.forEach((p) => {
+        setStyle(p, {
+            filter: "grayscale(0%)",
         });
     });
 
@@ -94,21 +99,12 @@ function handleMouseOverOrClick() {
             fill: iconColors[lastHoverButtonIndex],
         });
 
-        pic.forEach((p, idx) => {
-            setStyle(p, {
-                width: "600px",
-                height: "400px",
-            });
-            if (idx == lastHoverButtonIndex) {
-                setStyle(p, {
-                    width: "660px",
-                    height: "420px",
-                });
-            }
+        setStyle(pic[lastHoverButtonIndex], {
+            scale: "1.1",
         })
 
         setStyle(pic_div[lastHoverButtonIndex], {
-            margin: "30px 0px 40px 0px",
+            margin: "40px 0px 40px 0px",
         });
 
         setStyle(container0, {
@@ -117,16 +113,16 @@ function handleMouseOverOrClick() {
         });
 
         setStyle(container1, {
-            transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)" + picturePosition[lastHoverButtonIndex],
+            transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)",
+        });
+
+        setStyle(container2, {
+            transform: picturePositionSelect[lastHoverButtonIndex],
         });
 
     }
 
 }
-
-document.addEventListener('mouseover', function(e) {
-    console.log(e.target);
-})
 
 controls.forEach((control, index) => {
     control.addEventListener('mouseover', function(event) {
@@ -145,12 +141,24 @@ controls.forEach((control, index) => {
                 });
 
                 setStyle(container0, {
-                    transform: "translateX(-18%)",
+                    transform: "translateX(-17%)",
                     perspectiveOrigin: "50% 50%",
                 });
 
                 setStyle(container1, {
-                    transform: "rotateX(40deg)" + picturePositionSelect[index],
+                    transform: "rotateX(40deg)",
+                });
+
+                setStyle(container2, {
+                    transform: picturePositionSelect[index],
+                });
+
+                pic.forEach((p, idx_) => {
+                    if (idx_ !== index) {
+                        setStyle(p, {
+                            filter: "grayscale(100%)",
+                        });
+                    }
                 });
 
             } else {
@@ -172,8 +180,7 @@ controls.forEach((control, index) => {
 
         pic.forEach((p) => {
             setStyle(p, {
-                width: "600px",
-                height: "300px",
+                scale: "1"
             });
         });
 

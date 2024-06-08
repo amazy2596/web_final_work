@@ -5,6 +5,7 @@ import { progress_bar } from './variables.js';
 import { cover } from './variables.js';
 import { container0 } from './variables.js';
 import { container1 } from './variables.js';
+import { container2 } from './variables.js';
 import { University } from './variables.js';
 import { aboutMe } from './variables.js';
 import { controls } from './variables.js';
@@ -14,7 +15,7 @@ import { pic_div } from './variables.js';
 
 import { setStyle } from './utils.js';
 
-
+import { picturePositionSelect } from './variables.js';
 
 window.onload = async function() {
     await barAndTextColorAndPictureTransition();
@@ -49,8 +50,12 @@ async function barAndTextColorAndPictureTransition() {
     });
 
     setStyle(container1, {
-        transform: "rotateX(10deg) translateY(20%)",
+        transform: "rotateX(10deg)",
         opacity: "1",
+    });
+
+    setStyle(container2, {
+        transform: "translateY(21%)",
     });
 
     await new Promise(resolve => setTimeout(resolve, 500));
@@ -75,12 +80,11 @@ async function barAndTextColorAndPictureTransition() {
     });
 
     setStyle(container1, {
-        transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg) translateY(20%)",
+        transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)",
     });
 
     setStyle(pic[0], {
-        width: "660px",
-        height: "420px",
+        scale: "1.1",
     });
 
     setStyle(pic_div[0], {
@@ -120,14 +124,18 @@ async function barAndTextColorAndPictureTransition() {
         });
     });
 
-    await new Promise(resolve => setTimeout(resolve, 400));
-
     setStyle(leftbar, {
         width: "10px",
         opacity: "1",
     });
 
+    await new Promise(resolve => setTimeout(resolve, 400));
+
     setStyle(pre, {
         display: "none",
+    });
+    
+    setStyle(container2, {
+        transition: "transform 1s ease",
     });
 }
