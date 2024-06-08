@@ -124,8 +124,13 @@ function handleMouseOverOrClick() {
 
 }
 
+document.addEventListener('mouseover', function(e) {
+    console.log(e.target);
+})
+
 controls.forEach((control, index) => {
     control.addEventListener('mouseover', function(event) {
+        
         controls.forEach((con, idx) => {
 
             if (idx == index) {
@@ -202,12 +207,9 @@ controls.forEach((control, index) => {
 
         lastHoverButtonIndex = index;
 
-        if (event.target !== columnBox) {
-            console.log(event.target);
-            control.addEventListener('mouseleave', handleMouseOverOrClick);
-            control.addEventListener('click', handleMouseOverOrClick);
-        }
-
     });
+
+    control.addEventListener('mouseleave', handleMouseOverOrClick);
+    control.addEventListener('click', handleMouseOverOrClick);
 
 });
