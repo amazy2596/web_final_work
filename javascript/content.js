@@ -46,7 +46,7 @@ function handleMouseOverOrClick() {
 
     texts.forEach((text) => {
         setStyle(text, {
-            display: "none",
+            opacity: "0",
             color: "rgb(120, 120, 120)",
         });
     });
@@ -174,7 +174,7 @@ controls.forEach((control, index) => {
 
         texts.forEach((text) => {
             setStyle(text, {
-                display: "block",
+                opacity: "1",
             });
         });
 
