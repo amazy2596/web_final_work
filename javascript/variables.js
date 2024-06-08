@@ -55,3 +55,9 @@ export const backgroundColors = [
     "rgb(255, 248, 220)",   // 玉米色，对应探月工程
     "rgb(220, 220, 220)"    // 浅灰，对应抗疫
 ];
+
+export const picturePositionSelect = [
+    "translateY(250px)",
+    "translateY(-110px)",
+    
+];

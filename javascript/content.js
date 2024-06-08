@@ -1,4 +1,4 @@
-import { University } from "./variables.js";
+import { University, picturePositionSelect } from "./variables.js";
 import { aboutMe } from "./variables.js";
 import { iconColors } from "./variables.js";
 import { backgroundColors } from "./variables.js";
@@ -12,6 +12,7 @@ import { controls } from "./variables.js";
 import { root } from "./variables.js";
 import { container0 } from "./variables.js";
 import { container1 } from "./variables.js";
+
 
 import { setStyle } from "./utils.js";
 
@@ -32,7 +33,7 @@ aboutMe.addEventListener('mouseover', function(event) {
 
 });
 
-function handleMouseOverOrClick(event) {
+function handleMouseOverOrClick() {
 
     icons.forEach((icon) => {
         setStyle(icon, {
@@ -90,12 +91,35 @@ function handleMouseOverOrClick(event) {
         setStyle(arrows[lastHoverButtonIndex], {
             fill: iconColors[lastHoverButtonIndex],
         });
+
+        pic.forEach((p, idx) => {
+            setStyle(p, {
+                width: "600px",
+                height: "400px",
+            });
+            if (idx == lastHoverButtonIndex) {
+                setStyle(p, {
+                    width: "660px",
+                    height: "420px",
+                });
+            }
+        })
+
+        setStyle(container0, {
+            transform: "translateX(0%)",
+            perspectiveOrigin: "100% 50%",
+        });
+
+        setStyle(container1, {
+            transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)" + picturePositionSelect[lastHoverButtonIndex],
+        });
+
     }
 
 }
 
 controls.forEach((control, index) => {
-    control.addEventListener('mouseover', function(event) {
+    control.addEventListener('mouseover', function() {
         controls.forEach((con, idx) => {
 
             if (idx == index) {
@@ -115,7 +139,7 @@ controls.forEach((control, index) => {
                 });
 
                 setStyle(container1, {
-                    transform: "rotateX(30deg) translateY(20%)",
+                    transform: "rotateX(40deg)" + picturePositionSelect[index],
                 });
 
             }
@@ -125,7 +149,7 @@ controls.forEach((control, index) => {
         pic.forEach((p) => {
             setStyle(p, {
                 width: "600px",
-                height: "4000px",
+                height: "300px",
             });
         });
 
