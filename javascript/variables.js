@@ -18,6 +18,8 @@ export const aboutMe = document.getElementById('aboutMe');
 
 export const controls = document.querySelectorAll('.control');
 
+export const pic_div = document.querySelectorAll('.pic_div');
+
 export const pic = document.querySelectorAll('.pic');
 
 export const icons = document.querySelectorAll('.icon');
@@ -33,6 +35,8 @@ export const titles = document.querySelectorAll('.text_');
 export const arrows = document.querySelectorAll('.arrow');
 
 export const root = document.getElementById('root');
+
+export const columnBox = document.getElementById('column_box');
 
 export const iconColors = [
     "rgb(178, 34, 34)",     // 火砖红，对应建国
@@ -57,7 +61,23 @@ export const backgroundColors = [
 ];
 
 export const picturePositionSelect = [
-    "translateY(250px)",
-    "translateY(-110px)",
-    
+    "translateY(30%)",
+    "translateY(-15%)",
+    "translateY(-60%)",
+    "translateY(-105%)",
+    "translateY(-150%)",
+    "translateY(-195%)",
+    "translateY(-240%)",
+    "translateY(-285%)",
+];
+
+export const picturePosition = [
+    "translateY(20%)",
+    "translateY(-35%)",
+    "translateY(-95%)",
+    "translateY(-150%)",
+    "translateY(-205%)",
+    "translateY(-265%)",
+    "translateY(-320%)",
+    "translateY(-375%)",
 ];

@@ -1,4 +1,4 @@
-import { University, picturePositionSelect } from "./variables.js";
+import { University } from "./variables.js";
 import { aboutMe } from "./variables.js";
 import { iconColors } from "./variables.js";
 import { backgroundColors } from "./variables.js";
@@ -12,8 +12,10 @@ import { controls } from "./variables.js";
 import { root } from "./variables.js";
 import { container0 } from "./variables.js";
 import { container1 } from "./variables.js";
-
-
+import { picturePositionSelect } from "./variables.js";
+import { picturePosition } from "./variables.js";
+import { pic_div } from "./variables.js";
+import { columnBox } from "./variables.js";
 import { setStyle } from "./utils.js";
 
 let lastHoverButtonIndex = -1;
@@ -105,13 +107,17 @@ function handleMouseOverOrClick() {
             }
         })
 
+        setStyle(pic_div[lastHoverButtonIndex], {
+            margin: "30px 0px 40px 0px",
+        });
+
         setStyle(container0, {
             transform: "translateX(0%)",
             perspectiveOrigin: "100% 50%",
         });
 
         setStyle(container1, {
-            transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)" + picturePositionSelect[lastHoverButtonIndex],
+            transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)" + picturePosition[lastHoverButtonIndex],
         });
 
     }
@@ -119,7 +125,7 @@ function handleMouseOverOrClick() {
 }
 
 controls.forEach((control, index) => {
-    control.addEventListener('mouseover', function() {
+    control.addEventListener('mouseover', function(event) {
         controls.forEach((con, idx) => {
 
             if (idx == index) {
@@ -142,8 +148,21 @@ controls.forEach((control, index) => {
                     transform: "rotateX(40deg)" + picturePositionSelect[index],
                 });
 
+            } else {
+
+                setStyle(icons[idx], {
+                    backgroundColor: "rgb(120, 120, 120)",
+                    opacity: "0.4",
+                });
+
             }
 
+        });
+
+        pic_div.forEach((p) => {
+            setStyle(p, {
+                margin: "30px 0px 30px 0px",
+            });
         });
 
         pic.forEach((p) => {
@@ -183,9 +202,12 @@ controls.forEach((control, index) => {
 
         lastHoverButtonIndex = index;
 
-    });
+        if (event.target !== columnBox) {
+            console.log(event.target);
+            control.addEventListener('mouseleave', handleMouseOverOrClick);
+            control.addEventListener('click', handleMouseOverOrClick);
+        }
 
-    control.addEventListener('mouseout', handleMouseOverOrClick);
-    control.addEventListener('click', handleMouseOverOrClick);
+    });
 
 });

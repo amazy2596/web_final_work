@@ -10,6 +10,7 @@ import { aboutMe } from './variables.js';
 import { controls } from './variables.js';
 import { pic } from './variables.js';
 import { root } from './variables.js';
+import { pic_div } from './variables.js';
 
 import { setStyle } from './utils.js';
 
@@ -80,6 +81,10 @@ async function barAndTextColorAndPictureTransition() {
     setStyle(pic[0], {
         width: "660px",
         height: "420px",
+    });
+
+    setStyle(pic_div[0], {
+        margin: "30px 0px 40px 0px",
     });
 
     setStyle(University, {
