@@ -1,4 +1,3 @@
-import { text0 } from './variables.js';
 import { text_0 } from './variables.js';
 import { bottomText } from './variables.js';
 import { progress_bar } from './variables.js';
@@ -15,7 +14,6 @@ import { pic_div } from './variables.js';
 
 import { setStyle } from './utils.js';
 
-import { picturePositionSelect } from './variables.js';
 
 window.onload = async function() {
     await barAndTextColorAndPictureTransition();
@@ -138,4 +136,5 @@ async function barAndTextColorAndPictureTransition() {
     setStyle(container2, {
         transition: "transform 1s ease",
     });
+
 }

@@ -16,8 +16,9 @@ import { picturePositionSelect } from "./variables.js";
 import { pic_div } from "./variables.js";
 import { container2 } from "./variables.js";
 import { setStyle } from "./utils.js";
+import { redirectLink } from "./variables.js";
 
-let lastHoverButtonIndex = -1;
+let lastHoverButtonIndex = 0;
 
 aboutMe.addEventListener('mouseover', function(event) {
 
@@ -70,61 +71,58 @@ function handleMouseOverOrClick() {
         opacity: "1",
     });
 
-    if (lastHoverButtonIndex !== -1) {
+    setStyle(icons[lastHoverButtonIndex], {
+        backgroundColor: iconColors[lastHoverButtonIndex],
+        opacity: "1",
+    });
 
-        setStyle(icons[lastHoverButtonIndex], {
-            backgroundColor: iconColors[lastHoverButtonIndex],
-            opacity: "1",
-        });
+    setStyle(leftbar, {
+        backgroundColor: iconColors[lastHoverButtonIndex],
+        opactiy: "1",
+    });
 
-        setStyle(leftbar, {
-            backgroundColor: iconColors[lastHoverButtonIndex],
-            opactiy: "1",
-        });
+    setStyle(root, {
+        backgroundColor: backgroundColors[lastHoverButtonIndex],
+    });
 
-        setStyle(root, {
-            backgroundColor: backgroundColors[lastHoverButtonIndex],
-        });
+    setStyle(titles[lastHoverButtonIndex], {
+        display: "block",
+        opacity: "1",
+    });
 
-        setStyle(titles[lastHoverButtonIndex], {
-            display: "block",
-            opacity: "1",
-        });
+    setStyle(titles[lastHoverButtonIndex].childNodes[1], {
+        color: iconColors[lastHoverButtonIndex],
+    });
 
-        setStyle(titles[lastHoverButtonIndex].childNodes[1], {
-            color: iconColors[lastHoverButtonIndex],
-        });
+    setStyle(arrows[lastHoverButtonIndex], {
+        fill: iconColors[lastHoverButtonIndex],
+    });
 
-        setStyle(arrows[lastHoverButtonIndex], {
-            fill: iconColors[lastHoverButtonIndex],
-        });
+    setStyle(pic[lastHoverButtonIndex], {
+        scale: "1.1",
+    })
 
-        setStyle(pic[lastHoverButtonIndex], {
-            scale: "1.1",
-        })
+    setStyle(pic_div[lastHoverButtonIndex], {
+        margin: "40px 0px 40px 0px",
+    });
 
-        setStyle(pic_div[lastHoverButtonIndex], {
-            margin: "40px 0px 40px 0px",
-        });
+    setStyle(container0, {
+        transform: "translateX(0%)",
+        perspectiveOrigin: "100% 50%",
+    });
 
-        setStyle(container0, {
-            transform: "translateX(0%)",
-            perspectiveOrigin: "100% 50%",
-        });
+    setStyle(container1, {
+        transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)",
+    });
 
-        setStyle(container1, {
-            transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)",
-        });
-
-        setStyle(container2, {
-            transform: picturePositionSelect[lastHoverButtonIndex],
-        });
-
-    }
+    setStyle(container2, {
+        transform: picturePositionSelect[lastHoverButtonIndex],
+    });
 
 }
 
 controls.forEach((control, index) => {
+
     control.addEventListener('mouseover', function(event) {
         
         controls.forEach((con, idx) => {
@@ -132,11 +130,11 @@ controls.forEach((control, index) => {
             if (idx == index) {
 
                 setStyle(icons[idx], {
-                    backgroundColor: iconColors[index],
+                    backgroundColor: iconColors[idx],
                     opacity: "1",
                 });
 
-                setStyle(texts[index], {
+                setStyle(texts[idx], {
                     color: "white",
                 });
 
@@ -150,15 +148,17 @@ controls.forEach((control, index) => {
                 });
 
                 setStyle(container2, {
-                    transform: picturePositionSelect[index],
+                    transform: picturePositionSelect[idx],
                 });
 
                 pic.forEach((p, idx_) => {
+
                     if (idx_ !== index) {
                         setStyle(p, {
                             filter: "grayscale(100%)",
                         });
                     }
+
                 });
 
             } else {
@@ -173,27 +173,35 @@ controls.forEach((control, index) => {
         });
 
         pic_div.forEach((p) => {
+
             setStyle(p, {
                 margin: "30px 0px 30px 0px",
             });
+
         });
 
         pic.forEach((p) => {
+
             setStyle(p, {
                 scale: "1"
             });
+
         });
 
         texts.forEach((text) => {
+
             setStyle(text, {
                 opacity: "1",
             });
+
         });
 
         titles.forEach((title) => {
+
             setStyle(title, {
                 opacity: "0",
             });
+
         });
 
         setStyle(University, {
@@ -220,3 +228,5 @@ controls.forEach((control, index) => {
     control.addEventListener('click', handleMouseOverOrClick);
 
 });
+
+

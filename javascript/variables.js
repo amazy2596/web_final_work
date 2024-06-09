@@ -62,11 +62,22 @@ export const backgroundColors = [
 
 export const picturePositionSelect = [
     "translateY(20%)",
-    "translateY(-36%)",
-    "translateY(-93%)",
-    "translateY(-149%)",
-    "translateY(-206%)",
-    "translateY(-262%)",
-    "translateY(-319%)",
-    "translateY(-375%)",
+    "translateY(-35%)",
+    "translateY(-90%)",
+    "translateY(-146%)",
+    "translateY(-201%)",
+    "translateY(-257%)",
+    "translateY(-312%)",
+    "translateY(-367%)",
 ];
+
+export const redirectLink = [
+    "html/event0.html",
+    "html/event1.html",
+    "html/event2.html",
+    "html/event3.html",
+    "html/event4.html",
+    "html/event5.html",
+    "html/event6.html",
+    "html/event7.html",
+]

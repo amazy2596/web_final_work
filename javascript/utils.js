@@ -2,7 +2,7 @@
 export function setStyle(element, styles) {
 
     if (element) {
-        // console.log(`Setting styles for element:`, element, styles);
+        console.log(`Setting styles for element:`, element, styles);
         for (let property in styles) {
             element.style[property] = styles[property];
         }
