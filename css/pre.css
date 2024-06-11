@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#total {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#pre {
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: auto;
+    cursor: wait;
+    background-color: black;
+}
+
+#progress_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    background-color: white;
+    height: 0%;
+    transition: height 1.5s ease;
+}
+
+#element_0 {
+    padding: 0 6.25%;
+}
+
+#element_1 {
+    box-sizing: border-box;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+
+#element_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    height: 831px;
+    padding: 70px 0px;
+}
+
+#top {
+    width: 528.758px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.text0 {
+    position: relative;
+    opacity: 0;
+    margin-left: 30px;
+    transform: translateY(50%);
+    transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+#cover {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 250, 250);
+    transform: translateY(0%);
+    transition: transform 1.5s ease;
+    z-index: -1;
+}
+
+#bottom {
+    position: absolute;
+    display: flex;
+    bottom: 25%;
+    left: 30px;
+    width: 400px;
+    height: 60px;
+    border-radius:25px 25px 25px 0px;
+    background-color:rgb(38,38,38);
+    opacity: 0;
+    transform: translateY(50%);
+    transition: transform 2s ease, opacity 2s ease;
+}
+
+.text1 {
+    color: rgb(255, 250, 250);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: auto;
+}

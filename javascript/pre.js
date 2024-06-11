@@ -7,13 +7,14 @@ import { container0 } from './variables.js';
 import { container1 } from './variables.js';
 import { container2 } from './variables.js';
 import { University } from './variables.js';
-import { aboutMe } from './variables.js';
+import { about } from './variables.js';
 import { controls } from './variables.js';
 import { pic } from './variables.js';
 import { root } from './variables.js';
 import { pic_div } from './variables.js';
 
 import { setStyle } from './utils.js';
+
 
 
 window.onload = async function() {
@@ -54,7 +55,9 @@ async function barAndTextColorAndPictureTransition() {
     });
 
     setStyle(container2, {
-        transform: "translateY(21%)",
+        // transform: "translateY(21%)",
+        top: "20%",
+        
     });
 
     await new Promise(resolve => setTimeout(resolve, 500));
@@ -94,7 +97,7 @@ async function barAndTextColorAndPictureTransition() {
         display: "flex",
     });
 
-    setStyle(aboutMe, {
+    setStyle(about, {
         display: "flex",
     });
 
@@ -112,7 +115,7 @@ async function barAndTextColorAndPictureTransition() {
 
     await new Promise(resolve => setTimeout(resolve, 500));
 
-    setStyle(aboutMe, {
+    setStyle(about, {
         transform: "translateY(0%)",
         opacity: "1",
     });
@@ -135,7 +138,7 @@ async function barAndTextColorAndPictureTransition() {
     });
     
     setStyle(container2, {
-        transition: "transform 1s ease",
+        transition: "transform 1s ease, top 1s ease",
     });
 
 }

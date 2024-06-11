@@ -16,8 +16,6 @@ export const container2 = document.getElementById('container2');
 
 export const University = document.getElementById('University');
 
-export const aboutMe = document.getElementById('aboutMe');
-
 export const controls = document.querySelectorAll('.control');
 
 export const pic_div = document.querySelectorAll('.pic_div');
@@ -37,6 +35,10 @@ export const titles = document.querySelectorAll('.text_');
 export const arrows = document.querySelectorAll('.arrow');
 
 export const root = document.getElementById('root');
+
+export const about = document.getElementById('about');
+
+// export let lastHoverButtonIndex = 0;
 
 export const iconColors = [
     "rgb(178, 34, 34)",     // 火砖红，对应建国
@@ -60,26 +62,15 @@ export const backgroundColors = [
     "rgb(220, 220, 220)"    // 浅灰，对应抗疫
 ];
 
-export const picturePositionSelect = [
-    "translateY(20%)",
-    "translateY(-35%)",
-    "translateY(-90%)",
-    "translateY(-146%)",
-    "translateY(-201%)",
-    "translateY(-257%)",
-    "translateY(-312%)",
-    "translateY(-367%)",
-];
-
 export const picturePosition = [
-    "translateY(20%)",
-    "translateY(-37%)",
-    "translateY(-94%)",
-    "translateY(-152%)",
-    "translateY(-209%)",
-    "translateY(-267%)",
-    "translateY(-325%)",
-    "translateY(-383%)",
+    "20%",
+    "-35%",
+    "-92%",
+    "-146%",
+    "-202%",
+    "-257%",
+    "-313%",
+    "-368%",
 ]
 
 export const redirectLink = [

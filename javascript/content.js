@@ -1,5 +1,5 @@
-import { University, rightbar } from "./variables.js";
-import { aboutMe } from "./variables.js";
+import { University } from "./variables.js";
+import { about } from "./variables.js";
 import { iconColors } from "./variables.js";
 import { backgroundColors } from "./variables.js";
 import { texts } from "./variables.js";
@@ -12,31 +12,17 @@ import { controls } from "./variables.js";
 import { root } from "./variables.js";
 import { container0 } from "./variables.js";
 import { container1 } from "./variables.js";
-import { picturePositionSelect } from "./variables.js";
 import { pic_div } from "./variables.js";
 import { container2 } from "./variables.js";
-import { setStyle } from "./utils.js";
 import { redirectLink } from "./variables.js";
 import { picturePosition } from "./variables.js";
+// import { lastHoverButtonIndex } from "./variables.js";
+
+import { setStyle } from "./utils.js";
 
 
 
-let lastHoverButtonIndex = 0;
-
-aboutMe.addEventListener('mouseover', function(event) {
-
-    if (event.target == aboutMe) {
-        setStyle(rightbar, {
-            width: "0px",
-        });
-    }
-    else {
-        setStyle(rightbar, {
-            width: "15px",
-        });
-    }
-
-});
+export let lastHoverButtonIndex = 0;
 
 function handleMouseOverOrClick() {
 
@@ -70,7 +56,7 @@ function handleMouseOverOrClick() {
         opacity: "1",
     });
 
-    setStyle(aboutMe, {
+    setStyle(about, {
         opacity: "1",
     });
 
@@ -109,6 +95,10 @@ function handleMouseOverOrClick() {
         margin: "40px 0px 40px 0px",
     });
 
+    setStyle(container2, {
+        transform: picturePosition[lastHoverButtonIndex],
+    });
+
     setStyle(container0, {
         transform: "translateX(0%)",
         perspectiveOrigin: "100% 50%",
@@ -116,10 +106,6 @@ function handleMouseOverOrClick() {
 
     setStyle(container1, {
         transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)",
-    });
-
-    setStyle(container2, {
-        transform: picturePositionSelect[lastHoverButtonIndex],
     });
 
 }
@@ -151,7 +137,7 @@ controls.forEach((control, index) => {
                 });
 
                 setStyle(container2, {
-                    transform: picturePositionSelect[idx],
+                    top: picturePosition[idx],
                 });
 
                 pic.forEach((p, idx_) => {
@@ -215,7 +201,7 @@ controls.forEach((control, index) => {
             opacity: "0",
         });
 
-        setStyle(aboutMe, {
+        setStyle(about, {
             opacity: "0",
         });
 
@@ -238,42 +224,6 @@ pic.forEach((p, index) => {
 
         if (index == lastHoverButtonIndex) {
             window.location.href = redirectLink[index];
-        } else {
-
-            setStyle(container2, {
-                transform: picturePosition[index],
-            });
-            
-            setStyle(pic_div[index], {
-                margin: "40px 0px 40px 0px",
-            });
-
-            setStyle(pic[index], {
-                scale: "1.1",
-            });
-
-            setStyle(pic[lastHoverButtonIndex], {
-                scale: "1",
-            });
-
-            setStyle(icons[lastHoverButtonIndex], {
-                backgroundColor: "rgb(120, 120, 120)",
-                opacity: "0.4",
-            });
-
-            setStyle(icons[index], {
-                backgroundColor: iconColors[index],
-                opacity: "1",
-            });
-
-            if (index > lastHoverButtonIndex) {
-
-            } else {
-
-            }
         }
-
-        lastHoverButtonIndex = index;
-
     });
 });
