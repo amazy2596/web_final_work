@@ -1,4 +1,5 @@
 import { text_0 } from './variables.js';
+import { text0 } from './variables.js';
 import { bottomText } from './variables.js';
 import { progress_bar } from './variables.js';
 import { cover } from './variables.js';

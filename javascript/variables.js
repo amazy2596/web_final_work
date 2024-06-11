@@ -71,6 +71,17 @@ export const picturePositionSelect = [
     "translateY(-367%)",
 ];
 
+export const picturePosition = [
+    "translateY(20%)",
+    "translateY(-37%)",
+    "translateY(-94%)",
+    "translateY(-152%)",
+    "translateY(-209%)",
+    "translateY(-267%)",
+    "translateY(-325%)",
+    "translateY(-383%)",
+]
+
 export const redirectLink = [
     "html/event0.html",
     "html/event1.html",

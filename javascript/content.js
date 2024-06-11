@@ -17,6 +17,9 @@ import { pic_div } from "./variables.js";
 import { container2 } from "./variables.js";
 import { setStyle } from "./utils.js";
 import { redirectLink } from "./variables.js";
+import { picturePosition } from "./variables.js";
+
+
 
 let lastHoverButtonIndex = 0;
 
@@ -78,7 +81,7 @@ function handleMouseOverOrClick() {
 
     setStyle(leftbar, {
         backgroundColor: iconColors[lastHoverButtonIndex],
-        opactiy: "1",
+        opacity: "1",
     });
 
     setStyle(root, {
@@ -183,7 +186,7 @@ controls.forEach((control, index) => {
         pic.forEach((p) => {
 
             setStyle(p, {
-                scale: "1"
+                scale: "1",
             });
 
         });
@@ -201,7 +204,7 @@ controls.forEach((control, index) => {
             setStyle(title, {
                 opacity: "0",
             });
-
+            
         });
 
         setStyle(University, {
@@ -230,3 +233,47 @@ controls.forEach((control, index) => {
 });
 
 
+pic.forEach((p, index) => {
+    p.addEventListener('click', function(event) {
+
+        if (index == lastHoverButtonIndex) {
+            window.location.href = redirectLink[index];
+        } else {
+
+            setStyle(container2, {
+                transform: picturePosition[index],
+            });
+            
+            setStyle(pic_div[index], {
+                margin: "40px 0px 40px 0px",
+            });
+
+            setStyle(pic[index], {
+                scale: "1.1",
+            });
+
+            setStyle(pic[lastHoverButtonIndex], {
+                scale: "1",
+            });
+
+            setStyle(icons[lastHoverButtonIndex], {
+                backgroundColor: "rgb(120, 120, 120)",
+                opacity: "0.4",
+            });
+
+            setStyle(icons[index], {
+                backgroundColor: iconColors[index],
+                opacity: "1",
+            });
+
+            if (index > lastHoverButtonIndex) {
+
+            } else {
+
+            }
+        }
+
+        lastHoverButtonIndex = index;
+
+    });
+});
