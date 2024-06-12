@@ -52,6 +52,8 @@ export const bottom_arrow = document.getElementById('bottom_arrow');
 
 export const event = document.getElementById('event');
 
+export const temp = document.getElementById('temp');
+
 export const iconColors = [
     "rgb(178, 34, 34)",     // 火砖红，对应建国
     "rgb(34, 139, 34)",     // 森林绿，对应改革开放

@@ -111,7 +111,6 @@
     color: black;
     text-transform: uppercase;
     align-items: center;
-    cursor: pointer;
     text-decoration: none;
     z-index: 6;
     transform: translateX(-15%);

@@ -19,6 +19,7 @@ import { back } from "./variables.js";
 import { bottom_arrow } from "./variables.js";
 import { event } from "./variables.js";
 import { controls } from "./variables.js";
+import { temp } from "./variables.js";
 
 import { setStyle } from "./utils.js";
 
@@ -27,6 +28,12 @@ import { setStyle } from "./utils.js";
 mores.forEach((more) => {
 
     more.addEventListener('click', function() {
+
+        setStyle(temp, {
+            display: "block",
+            background: backgroundColors[lastHoverButtonIndex],
+            zIndex: "4"
+        });
 
         setStyle(root, {
             transition: "width 1s ease",
@@ -112,6 +119,12 @@ pics.forEach((pic, index) => {
 
         if (lastHoverButtonIndex != index) 
             return;
+
+        setStyle(temp, {
+            display: "block",
+            background: backgroundColors[lastHoverButtonIndex],
+            zIndex: "4"
+        });
 
         setStyle(root, {
             transition: "width 1s ease",
@@ -269,6 +282,10 @@ back.addEventListener('click', function() {
             display: "flex",
             PointerEvents: "auto",
         });
+    });
+
+    setStyle(temp, {
+        display: "none",
     });
 
 });
