@@ -1,0 +1,29 @@
+#event {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 5;
+    pointer-events: none;
+}
+
+#event_root {
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    width: 0%;
+    overflow: hidden;
+    transition: width 1s ease;
+    z-index: 5;
+}
+
+#bottom_arrow {
+    position: absolute;
+    display: none;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -95%);
+    z-index: 6;
+}

@@ -8,11 +8,14 @@
     <link rel = "stylesheet" href = "css/pre.css">
     <link rel = "stylesheet" href = "css/content.css">
     <link rel = "stylesheet" href = "css/container.css">
-
+    <link rel = "stylesheet" href = "css/detail_about.css">
+    <link rel = "stylesheet" href = "css/event.css">
 
     <script src = "javascript/pre.js" type = "module" defer></script>
     <script src = "javascript/content.js" type = "module" defer></script>
-    <script src = "javascript/about.js" type = "module" defer></script>
+    <script src = "javascript/detail_about.js" type = "module" defer></script>
+    <script src = "javascript/event.js" type = "module" defer></script>
+
 
     <title>红旗下的篇章：中国的奋进历程</title>
 
@@ -41,9 +44,13 @@
             <div id = "leftbar"></div>
             <div id = "rightbar"></div>
             <div id = "topbar">
-                <a id = "University" href = "https://www.henu.edu.cn/">
-                    <span>Henu-University</shttps://www.henu.edu.cn/pan>
+                <a id = "University" href = "https://www.henu.edu.cn/" target = "_blank">
+                    <span>Henu-University</span>
                 </a>
+                <div id = "back">
+                    <svg viewBox="0 0 17 14" id = "back_arrow"><path d="M17,6.5v1C17,7.8,16.8,8,16.5,8H3.3l4.4,4.4c0.1,0.1,0.1,0.2,0.1,0.4s-0.1,0.3-0.1,0.4 l-0.7,0.7C7,13.9,6.8,14,6.7,14s-0.3-0.1-0.4-0.1L0.2,7.7C0.1,7.6,0,7.4,0,7.2V6.8c0-0.2,0.1-0.4,0.2-0.5l6.1-6.1 C6.5,0.1,6.6,0,6.7,0S7,0.1,7.1,0.1l0.7,0.7C7.9,1,7.9,1.1,7.9,1.2c0,0.1-0.1,0.3-0.1,0.3L3.3,6h13.2C16.8,6,17,6.2,17,6.5z"></path></svg>
+                    <span id = "back_text">Back home</span>
+                </div>
                 <a id = "about">
                     <span>About</span>
                 </a>
@@ -179,6 +186,15 @@
                         <img src = "image/history/history7.jpg" class = "pic" alt = "">
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id = "detail_about">
+            <div id = "about_root"></div>
+        </div>
+        <div id = "event">
+            <div id = "event_root"></div>
+            <div id = "bottom_arrow">
+                <svg width="56px" height="56px" viewBox="0 0 56 56"><circle cx="28" cy="28" r="27"></circle><circle stroke-dashoffset="0" fill="rgba(255, 255, 255, 1)" cx="28" cy="28" r="27"></circle><path opacity="1" transform="translate(0 0)" d="M28,19.5h1c0.3,0,0.5,0.2,0.5,0.5v13.2l4.4-4.4c0.1-0.1,0.2-0.1,0.4-0.1 c0.1,0,0.3,0.1,0.4,0.1l0.7,0.7c0.1,0.1,0.1,0.2,0.1,0.4c0,0.1-0.1,0.3-0.1,0.4l-6.1,6.1c-0.1,0.1-0.3,0.2-0.5,0.2h-0.4 c-0.2,0-0.4-0.1-0.5-0.2l-6.1-6.1c-0.1-0.1-0.1-0.2-0.1-0.4c0-0.1,0.1-0.3,0.1-0.4l0.7-0.7c0.1-0.1,0.2-0.1,0.3-0.1 s0.3,0.1,0.3,0.1l4.4,4.4V20C27.5,19.7,27.7,19.5,28,19.5z"></path></svg>
             </div>
         </div>
     </div>

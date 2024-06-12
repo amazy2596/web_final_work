@@ -20,7 +20,7 @@ export const controls = document.querySelectorAll('.control');
 
 export const pic_div = document.querySelectorAll('.pic_div');
 
-export const pic = document.querySelectorAll('.pic');
+export const pics = document.querySelectorAll('.pic');
 
 export const icons = document.querySelectorAll('.icon');
 
@@ -38,7 +38,19 @@ export const root = document.getElementById('root');
 
 export const about = document.getElementById('about');
 
-// export let lastHoverButtonIndex = 0;
+export const about_root = document.getElementById('about_root');
+
+export const content = document.getElementById('content');
+
+export const mores = document.querySelectorAll('.more');
+
+export const event_root = document.getElementById('event_root');
+
+export const back = document.getElementById('back');
+
+export const bottom_arrow = document.getElementById('bottom_arrow');
+
+export const event = document.getElementById('event');
 
 export const iconColors = [
     "rgb(178, 34, 34)",     // 火砖红，对应建国
@@ -71,15 +83,15 @@ export const picturePosition = [
     "-257%",
     "-313%",
     "-368%",
-]
+];
 
-export const redirectLink = [
-    "html/event0.html",
-    "html/event1.html",
-    "html/event2.html",
-    "html/event3.html",
-    "html/event4.html",
-    "html/event5.html",
-    "html/event6.html",
-    "html/event7.html",
-]
+export const picturePositionSelected = [
+    "-5%",
+    "-61%",
+    "-116%",
+    "-173%",
+    "-228%",
+    "-284%",
+    "-339%",
+    "-394%",
+];

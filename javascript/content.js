@@ -6,7 +6,7 @@ import { texts } from "./variables.js";
 import { titles } from "./variables.js";
 import { arrows } from "./variables.js";
 import { icons } from "./variables.js";
-import { pic } from "./variables.js";
+import { pics } from "./variables.js";
 import { leftbar } from "./variables.js";
 import { controls } from "./variables.js";
 import { root } from "./variables.js";
@@ -14,9 +14,8 @@ import { container0 } from "./variables.js";
 import { container1 } from "./variables.js";
 import { pic_div } from "./variables.js";
 import { container2 } from "./variables.js";
-import { redirectLink } from "./variables.js";
+import { mores } from "./variables.js";
 import { picturePosition } from "./variables.js";
-// import { lastHoverButtonIndex } from "./variables.js";
 
 import { setStyle } from "./utils.js";
 
@@ -46,7 +45,7 @@ function handleMouseOverOrClick() {
         });
     });
 
-    pic.forEach((p) => {
+    pics.forEach((p) => {
         setStyle(p, {
             filter: "grayscale(0%)",
         });
@@ -87,7 +86,7 @@ function handleMouseOverOrClick() {
         fill: iconColors[lastHoverButtonIndex],
     });
 
-    setStyle(pic[lastHoverButtonIndex], {
+    setStyle(pics[lastHoverButtonIndex], {
         scale: "1.1",
     })
 
@@ -96,7 +95,7 @@ function handleMouseOverOrClick() {
     });
 
     setStyle(container2, {
-        transform: picturePosition[lastHoverButtonIndex],
+        top: picturePosition[lastHoverButtonIndex],
     });
 
     setStyle(container0, {
@@ -140,7 +139,7 @@ controls.forEach((control, index) => {
                     top: picturePosition[idx],
                 });
 
-                pic.forEach((p, idx_) => {
+                pics.forEach((p, idx_) => {
 
                     if (idx_ !== index) {
                         setStyle(p, {
@@ -169,7 +168,7 @@ controls.forEach((control, index) => {
 
         });
 
-        pic.forEach((p) => {
+        pics.forEach((p) => {
 
             setStyle(p, {
                 scale: "1",
@@ -218,12 +217,12 @@ controls.forEach((control, index) => {
 
 });
 
+// mores.forEach((more) => {
+//     more.addEventListener('mouseover', function() {
 
-pic.forEach((p, index) => {
-    p.addEventListener('click', function(event) {
+//         setStyle(leftbar, {
+//             width: "15px",
+//         });
 
-        if (index == lastHoverButtonIndex) {
-            window.location.href = redirectLink[index];
-        }
-    });
-});
+//     });
+// })

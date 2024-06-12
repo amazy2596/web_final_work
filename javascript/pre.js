@@ -9,7 +9,7 @@ import { container2 } from './variables.js';
 import { University } from './variables.js';
 import { about } from './variables.js';
 import { controls } from './variables.js';
-import { pic } from './variables.js';
+import { pics } from './variables.js';
 import { root } from './variables.js';
 import { pic_div } from './variables.js';
 
@@ -85,7 +85,7 @@ async function barAndTextColorAndPictureTransition() {
         transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)",
     });
 
-    setStyle(pic[0], {
+    setStyle(pics[0], {
         scale: "1.1",
     });
 
