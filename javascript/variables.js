@@ -66,6 +66,8 @@ export const event_title = document.getElementById('event_title');
 
 export const event_content = document.getElementById('event_content');
 
+export const back_ = document.getElementById('back_');
+
 export const iconColors = [
     "#FF4500",
     "#4169E1",
