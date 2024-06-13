@@ -14,7 +14,6 @@ import { container0 } from "./variables.js";
 import { container1 } from "./variables.js";
 import { pic_div } from "./variables.js";
 import { container2 } from "./variables.js";
-import { mores } from "./variables.js";
 import { picturePosition } from "./variables.js";
 
 import { setStyle } from "./utils.js";
@@ -217,12 +216,3 @@ controls.forEach((control, index) => {
 
 });
 
-// mores.forEach((more) => {
-//     more.addEventListener('mouseover', function() {
-
-//         setStyle(leftbar, {
-//             width: "15px",
-//         });
-
-//     });
-// })
