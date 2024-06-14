@@ -23,7 +23,7 @@
     margin-left: 6.25%;
     opacity: 0;
     transform: translateX(50%);
-    transition: transform 1s ease, opacity 1s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
     cursor: pointer;
 }
 
@@ -65,7 +65,7 @@
     font-family: 'silka_rm', 'sans-serif';
     font-weight: 500;
     border-radius: 10px;
-    top: 35%;
+    top: 20%;
     left: 0%;
     width: 60%;
     height: 60%;
@@ -74,6 +74,6 @@
     color: white;
     transform: translateX(50%);
     opacity: 0;
-    transition: transform 1s ease, opacity 1s ease;
+    transition: transform 0.8s ease, opacity 0.8s ease;
 }
 

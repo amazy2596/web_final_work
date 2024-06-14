@@ -186,22 +186,22 @@
 }
 
 .text_ {
-    position: relative;
-    display: none;
+    position: absolute;
+    display: block;
     width: 800px;
+    height: 350px;
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease, top 1s ease;
 }
 
 .title_ {
-    position: relative;
     font-family: 'silka_rm', 'sans-serif';
     top: 0%;
     font-size: 70px;
     font-weight: 700;
     margin-bottom: 40px;
     color: rgb(178, 34, 34);
-    transition: top 1s ease, color 1s ease;
+    transition: top 1s ease, color 1s ease, transform 1s ease;
 }
 
 .content_ {
@@ -216,6 +216,7 @@
 
 .more {
     font-family: 'silka_rm', 'sans-serif';
+    bottom: 0%;
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;

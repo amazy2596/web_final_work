@@ -84,12 +84,14 @@ mores.forEach((more) => {
                 if (idx == 1) {
                     setStyle(child, {
                         position: "absolute",
-                        top: "30%",
+                        top: "15%",
                         color: backgroundColors[lastHoverButtonIndex],
+                        transition: "top 1s ease, color 1s ease, transform 1s ease",
                     });
                 } else {
                     setStyle(child, {
                         opacity: "0",
+                        transition: "top 1s ease, color 1s ease, transform 1s ease",
                     })
                 }
             }
@@ -178,12 +180,14 @@ pics.forEach((pic, index) => {
                 if (idx == 1) {
                     setStyle(child, {
                         position: "absolute",
-                        top: "30%",
+                        top: "15%",
                         color: backgroundColors[lastHoverButtonIndex],
+                        transition: "top 1s ease, color 1s ease, transform 1s ease",
                     });
                 } else {
                     setStyle(child, {
                         opacity: "0",
+                        transition: "top 1s ease, color 1s ease, transform 1s ease",
                     })
                 }
             }
@@ -236,10 +240,11 @@ back.addEventListener('click', async function() {
             zIndex: "4",
         });
 
-        await new Promise((resolve) => setTimeout(resolve, 999));
+        await new Promise((resolve) => setTimeout(resolve, 699));
 
         setStyle(root_transition, {
             left: "0%",
+            transition: "width 0.5s ease",
         });
 
         event_title.innerHTML = "";
@@ -285,7 +290,11 @@ back.addEventListener('click', async function() {
             zIndex: "6",
         });
 
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 500));
+
+        setStyle(root_transition, {
+            transition: "width 0.5s ease-in",
+        });
 
         root_transition.style.removeProperty("left");
 
@@ -333,10 +342,12 @@ back.addEventListener('click', async function() {
                         position: "relative",
                         top: "0%",
                         color: iconColors[lastHoverButtonIndex],
+                        transition: "color 1s ease, transform 1s ease",
                     });
                 } else {
                     setStyle(child, {
                         opacity: "1",
+                        transition: "color 1s ease, transform 1s ease",
                     });
                 }
             }

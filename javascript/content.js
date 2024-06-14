@@ -40,7 +40,7 @@ function handleMouseOverOrClick() {
 
     titles.forEach((title) => {
         setStyle(title, {
-            display: "none",
+            // display: "none",
         });
     });
 
@@ -73,7 +73,7 @@ function handleMouseOverOrClick() {
     });
 
     setStyle(titles[lastHoverButtonIndex], {
-        display: "block",
+        // display: "block",
         opacity: "1",
     });
 
@@ -216,3 +216,145 @@ controls.forEach((control, index) => {
 
 });
 
+pics.forEach((pic, index) => {
+
+    pic.addEventListener('click', async function() {
+
+        if (index != lastHoverButtonIndex) {
+
+            setStyle(container0, {
+                perspectiveOrigin: "50% 50%",
+            });
+
+            setStyle(container1, {
+                transform: "rotateX(40deg)",
+            });
+
+            await new Promise((resolve) => {setTimeout(resolve, 10)});
+
+            setStyle(container0, {
+                perspectiveOrigin: "100% 50%",
+            });
+
+            setStyle(container1, {
+                transform: "rotateX(10deg) rotateY(-10deg) rotateZ(5deg)",
+            });
+
+            setStyle(container2, {
+                top: picturePosition[index],
+            });
+
+            pic_div.forEach((p, idx) => {
+                    
+                if (idx !== index) {
+                    setStyle(p, {
+                        margin: "30px 0px 30px 0px",
+                    });
+                } else {
+                    setStyle(p, {
+                        margin: "40px 0px 40px 0px",
+                    });
+                }
+
+            })
+            
+            pics.forEach((p, idx) => {
+                
+                if (idx !== index) {
+                    setStyle(p, {
+                        scale: "1",
+                    });
+                } else {
+                    setStyle(p, {
+                        scale: "1.1",
+                    });
+                }
+                
+            });
+
+            icons.forEach((icon, idx) => {
+                    
+                if (idx !== index) {
+                    setStyle(icon, {
+                        backgroundColor: "rgb(120, 120, 120)",
+                        opacity: "0.4",
+                    });
+                } else {
+                    setStyle(icon, {
+                        backgroundColor: iconColors[idx],
+                        opacity: "1",
+                    });
+                }
+    
+            });
+
+            setStyle(root, {
+                backgroundColor: backgroundColors[index],
+            });
+
+            setStyle(leftbar, {
+                backgroundColor: iconColors[index],
+            });
+
+            setStyle(titles[index].childNodes[1], {
+                color: iconColors[index],
+            });
+
+            setStyle(arrows[index], {
+                fill: iconColors[index],
+            });
+
+            if (index > lastHoverButtonIndex) {
+
+                setStyle(titles[index], {
+                    transform: "translateY(25px)",
+                });
+
+                await new Promise((resolve) => {setTimeout(resolve, 10)});
+
+                setStyle(titles[lastHoverButtonIndex], {
+                    opacity: "0",
+                    transform: "translateY(-25px)",
+                });
+
+                await new Promise((resolve) => {setTimeout(resolve, 350)});
+
+                setStyle(titles[index], {
+                    opacity: "1",
+                    transform: "translateY(0px)",
+                });
+
+            } else {
+                    
+                setStyle(titles[index], {
+                    transform: "translateY(-25px)",
+                });
+
+                await new Promise((resolve) => {setTimeout(resolve, 10)});
+
+                setStyle(titles[lastHoverButtonIndex], {
+                    opacity: "0",
+                    transform: "translateY(25px)",
+                });
+
+                await new Promise((resolve) => {setTimeout(resolve, 350)});
+
+                setStyle(titles[index], {
+                    opacity: "1",
+                    transform: "translateY(0px)",
+                });
+            }
+
+            setStyle(titles[lastHoverButtonIndex], {
+                transform: "translateY(0px)",
+            });
+
+            lastHoverButtonIndex = index;
+
+            await new Promise((resolve) => {setTimeout(resolve, 1)});
+
+        }
+
+    });
+
+});

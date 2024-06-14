@@ -8,19 +8,20 @@ about.addEventListener('click', async function() {
         zIndex: "10",
     });
 
-    setStyle(back_, {
-        transform: "translateX(0%)",
-        zIndex: "10",
-        opacity: "1",
-    });
-
     await new Promise(resolve => setTimeout(resolve, 200));
 
     setStyle(about_content, {
         transform: "translateX(0%)",
         zIndex: "10",
         opacity: "1",
-        transition: "transform 1s ease, opacity 0.5s ease",
+    });
+
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+    setStyle(back_, {
+        transform: "translateX(0%)",
+        zIndex: "10",
+        opacity: "1",
     });
 
 });
@@ -30,10 +31,10 @@ back_.addEventListener('click', async function() {
     setStyle(about_content, {
         transform: "translateX(50%)",
         opacity: "0",
-        transition: "transform 1s ease, opacity 1s ease;"
+        transition: "transform 1s ease, opacity 0.5s ease",
     });
 
-    await new Promise(resolve => setTimeout(resolve, 200));
+    await new Promise(resolve => setTimeout(resolve, 100));
 
     setStyle(about_root, {
         width: "0%",
@@ -49,6 +50,7 @@ back_.addEventListener('click', async function() {
 
     setStyle(about_content, {
         zIndex: "0",
+        transition: "transform 0.8s ease, opacity 0.8s ease;"
     });
 
 });

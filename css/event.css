@@ -45,7 +45,7 @@
     right: 0%;
     width: 0%;
     height: 100%;
-    transition: width 1s ease;
+    transition: width 0.5s ease-in;
     z-index: 10;
 }
 
